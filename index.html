@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Damariz Vera — Data Science &amp; Business Intelligence</title>
+<meta name="description" content="Portafolio de Damariz Vera: proyectos de forecasting, clasificación y segmentación de clientes con Python, SQL y Power BI.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0f1216;
+    --bg-panel: #161b21;
+    --bg-panel-raised: #1b2129;
+    --line: #2a313b;
+    --text: #e9ecef;
+    --text-dim: #9aa4b1;
+    --text-faint: #636d79;
+
+    --amber: #e8a33d;
+    --amber-dim: #e8a33d33;
+    --teal: #4dc3b0;
+    --teal-dim: #4dc3b033;
+    --violet: #b586e8;
+    --violet-dim: #b586e833;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    opacity: 0.12;
+  }
+
+  .wrap{
+    position: relative;
+    z-index: 1;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- header ---------- */
+  header{
+    padding: 88px 0 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    color: var(--text-faint);
+    letter-spacing: 0.02em;
+    margin: 0 0 18px;
+  }
+  .eyebrow span{ color: var(--amber); }
+  h1{
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    line-height: 1.05;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+  h1 em{
+    font-style: italic;
+    font-weight: 500;
+    color: var(--teal);
+  }
+  .role{
+    font-size: 1.1rem;
+    color: var(--text-dim);
+    margin: 0 0 28px;
+    max-width: 56ch;
+  }
+  .contact-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+  }
+  .contact-row a{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13.5px;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 16px;
+    background: var(--bg-panel);
+    transition: border-color .15s ease, color .15s ease;
+    word-break: break-all;
+  }
+  .contact-row a:hover{ border-color: var(--teal); color: var(--teal); }
+
+  /* ---------- summary ---------- */
+  .summary{
+    padding: 48px 0;
+    border-bottom: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  @media(min-width: 760px){
+    .summary{ grid-template-columns: 1.3fr 1fr; }
+  }
+  .summary p{
+    margin: 0;
+    color: var(--text-dim);
+    font-size: 1.02rem;
+  }
+  .stack-panel{
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 20px 22px;
+  }
+  .stack-panel h2{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    margin: 0 0 14px;
+    font-weight: 500;
+  }
+  .stack-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .stack-list span{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 4px 9px;
+  }
+
+  /* ---------- projects ---------- */
+  .projects{ padding: 56px 0 24px; }
+  .section-label{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    margin: 0 0 28px;
+  }
+
+  .project{
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--bg-panel);
+    padding: 32px 32px 28px;
+    margin-bottom: 28px;
+    overflow: hidden;
+  }
+  .project::before{
+    content:"";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 4px;
+    background: var(--accent);
+  }
+  .project-head{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .project-index{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+  }
+  .project h3{
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin: 4px 0 10px;
+    color: var(--text);
+  }
+  .project .tagline{
+    color: var(--text-dim);
+    font-size: 1rem;
+    margin: 0 0 22px;
+    max-width: 62ch;
+  }
+
+  .kpis{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 22px;
+  }
+  .kpi{
+    background: var(--bg-panel-raised);
+    padding: 14px 16px;
+  }
+  .kpi .val{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--accent);
+    display:block;
+  }
+  .kpi .lbl{
+    font-size: 11.5px;
+    color: var(--text-faint);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .tech-row{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 22px;
+  }
+  .tech-row span{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    color: var(--text-dim);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 3px 9px;
+  }
+
+  .project-links{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .project-links a{
+    font-size: 13.5px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--bg);
+    background: var(--accent);
+    border-radius: 7px;
+    padding: 9px 16px;
+    transition: opacity .15s ease;
+  }
+  .project-links a.secondary{
+    color: var(--accent);
+    background: transparent;
+    border: 1px solid var(--accent);
+  }
+  .project-links a:hover{ opacity: 0.82; }
+
+  /* ---------- footer ---------- */
+  footer{
+    border-top: 1px solid var(--line);
+    padding: 40px 0 80px;
+    margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  footer p{
+    margin: 0;
+    color: var(--text-faint);
+    font-size: 13px;
+    font-family: "IBM Plex Mono", monospace;
+  }
+  footer .contact-row a{ font-size: 12.5px; padding: 6px 13px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">PORTAFOLIO <span>/</span> DATA &amp; BI</p>
+    <h1>Damariz Vera<br><em>Data Science &amp; Business Intelligence</em></h1>
+    <p class="role">
+      Ingeniera en Informática con más de 8 años de experiencia en infraestructura y sistemas,
+      con foco reciente en Business Intelligence y especialización en Data Science. Estos son
+      tres proyectos end-to-end — forecasting, clasificación con despliegue en producción y
+      segmentación de clientes — que combinan esa experiencia de negocio con herramientas
+      actuales de análisis y machine learning.
+    </p>
+    <div class="contact-row">
+      <a href="mailto:dveraac@gmail.com">dveraac@gmail.com</a>
+      <a href="https://linkedin.com/in/damarizvera" target="_blank" rel="noopener">linkedin.com/in/damarizvera</a>
+      <a href="https://github.com/DamarizVera" target="_blank" rel="noopener">github.com/DamarizVera</a>
+    </div>
+  </header>
+
+  <section class="summary">
+    <p>
+      Experiencia real construyendo soluciones de datos para toma de decisiones —
+      desde un sistema de control de licencias en SQL Server hasta dashboards de
+      Power BI para gerencia — sumada a formación aplicada en análisis predictivo,
+      machine learning y bases de datos relacionales (Diplomado en Data Science,
+      Universidad Andrés Bello, 2026).
+    </p>
+    <div class="stack-panel">
+      <h2>Stack principal</h2>
+      <div class="stack-list">
+        <span>Python</span><span>SQL</span><span>Power BI</span>
+        <span>scikit-learn</span><span>XGBoost</span><span>pandas</span>
+        <span>PostgreSQL</span><span>DAX</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects">
+    <p class="section-label">Proyectos</p>
+
+    <!-- Project 1 -->
+    <article class="project" style="--accent: var(--amber);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">01 · FORECASTING</p>
+          <h3>air-operations-chile</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Pronóstico de operaciones aeroportuarias en Chile usando series de tiempo,
+        con comparación de modelos (SARIMA, Prophet, Random Forest, XGBoost) y un
+        dashboard de 5 páginas en Power BI para explorar estacionalidad y concentración
+        por aeropuerto.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">2.62%</span><span class="lbl">MAPE (XGBoost)</span></div>
+        <div class="kpi"><span class="val">1,123</span><span class="lbl">MAE</span></div>
+        <div class="kpi"><span class="val">45.2%</span><span class="lbl">Amplitud estacional</span></div>
+        <div class="kpi"><span class="val">5</span><span class="lbl">Páginas Power BI</span></div>
+      </div>
+      <div class="tech-row">
+        <span>Python</span><span>pandas</span><span>XGBoost</span><span>SARIMA</span>
+        <span>Prophet</span><span>Power BI</span><span>DAX</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/air-operations-chile" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/air-operations-chile#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 2 -->
+    <article class="project" style="--accent: var(--teal);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">02 · CLASIFICACIÓN + PRODUCCIÓN</p>
+          <h3>air-quality-chile</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Clasificación de calidad del aire a partir de datos de monitoreo (SINCA),
+        con un modelo Random Forest desplegado en un chatbot de Telegram que
+        entrega el pronóstico en tiempo real, corriendo 24/7 en producción.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">95.2%</span><span class="lbl">Accuracy</span></div>
+        <div class="kpi"><span class="val">93.3%</span><span class="lbl">F1-macro</span></div>
+        <div class="kpi"><span class="val">24/7</span><span class="lbl">Bot en producción</span></div>
+        <div class="kpi"><span class="val">Railway</span><span class="lbl">Deploy</span></div>
+      </div>
+      <div class="tech-row">
+        <span>Python</span><span>scikit-learn</span><span>Random Forest</span>
+        <span>python-telegram-bot</span><span>Railway</span><span>SINCA</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/air-quality-chile" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/air-quality-chile#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project" style="--accent: var(--violet);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">03 · SQL + CLUSTERING</p>
+          <h3>retail-customer-segmentation</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Modelo de datos en SQL (staging → dimensiones → hechos), análisis RFM,
+        segmentación de clientes con K-Means y un modelo de predicción de
+        abandono (churn) con validación temporal para evitar fuga de datos.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">5</span><span class="lbl">Segmentos (K-Means)</span></div>
+        <div class="kpi"><span class="val">71.6%</span><span class="lbl">F1 churn (Gradient Boosting)</span></div>
+        <div class="kpi"><span class="val">5,878</span><span class="lbl">Clientes analizados</span></div>
+        <div class="kpi"><span class="val">RFM</span><span class="lbl">Recency · Frequency · Monetary</span></div>
+      </div>
+      <div class="tech-row">
+        <span>SQL</span><span>PostgreSQL</span><span>K-Means</span>
+        <span>Gradient Boosting</span><span>scikit-learn</span><span>Window Functions</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/retail-customer-segmentation" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/retail-customer-segmentation#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+  </section>
+
+  <footer>
+    <p>Damariz Vera — Santiago, Chile</p>
+    <div class="contact-row">
+      <a href="mailto:dveraac@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/damarizvera" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/DamarizVera" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>
