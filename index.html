@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Damariz Vera — Data Science &amp; Business Intelligence</title>
-<meta name="description" content="Portafolio de Damariz Vera: proyectos de forecasting, clasificación y segmentación de clientes con Python, SQL y Power BI.">
+<meta name="description" content="Portafolio de Damariz Vera: proyectos de forecasting, clasificación, segmentación de clientes y mantenimiento predictivo con redes neuronales, usando Python, SQL, TensorFlow y Power BI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,6 +24,8 @@
     --teal-dim: #4dc3b033;
     --violet: #b586e8;
     --violet-dim: #b586e833;
+    --coral: #e8735a;
+    --coral-dim: #e8735a33;
   }
 
   *{ box-sizing: border-box; }
@@ -304,8 +306,8 @@
     <p class="role">
       Ingeniera en Informática con más de 8 años de experiencia en infraestructura y sistemas,
       con foco reciente en Business Intelligence y especialización en Data Science. Estos son
-      tres proyectos end-to-end — forecasting, clasificación con despliegue en producción y
-      segmentación de clientes — que combinan esa experiencia de negocio con herramientas
+      cuatro proyectos end-to-end — forecasting, clasificación con despliegue en producción,
+      segmentación de clientes y mantenimiento predictivo con redes neuronales — que combinan esa experiencia de negocio con herramientas
       actuales de análisis y machine learning.
     </p>
     <div class="contact-row">
@@ -329,6 +331,7 @@
         <span>Python</span><span>SQL</span><span>Power BI</span>
         <span>scikit-learn</span><span>XGBoost</span><span>pandas</span>
         <span>PostgreSQL</span><span>DAX</span>
+        <span>TensorFlow</span><span>Keras</span>
       </div>
     </div>
   </section>
@@ -421,6 +424,36 @@
       <div class="project-links">
         <a href="https://github.com/DamarizVera/retail-customer-segmentation" target="_blank" rel="noopener">Ver repositorio →</a>
         <a class="secondary" href="https://github.com/DamarizVera/retail-customer-segmentation#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 4 -->
+    <article class="project" style="--accent: var(--coral);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">04 · DEEP LEARNING + MANTENIMIENTO PREDICTIVO</p>
+          <h3>predictive-maintenance-turbofan</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Predicción de la vida útil remanente (RUL) de motores turbofan a partir de series
+        de tiempo de sensores (NASA C-MAPSS), con una red LSTM en TensorFlow/Keras comparada
+        contra Random Forest y XGBoost en igualdad de condiciones: separación por motor y
+        ensamble de modelos para resultados estables.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">12.81</span><span class="lbl">RMSE LSTM (ciclos)</span></div>
+        <div class="kpi"><span class="val">4.3</span><span class="lbl">MAE cerca de la falla</span></div>
+        <div class="kpi"><span class="val">12.57</span><span class="lbl">RMSE XGBoost</span></div>
+        <div class="kpi"><span class="val">-70%</span><span class="lbl">Error vs. referencia</span></div>
+      </div>
+      <div class="tech-row">
+        <span>Python</span><span>TensorFlow</span><span>Keras</span><span>LSTM</span>
+        <span>XGBoost</span><span>scikit-learn</span><span>Series de tiempo</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/predictive-maintenance-turbofan" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/predictive-maintenance-turbofan#readme" target="_blank" rel="noopener">README</a>
       </div>
     </article>
 
