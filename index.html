@@ -6,8 +6,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<title>Damariz Vera — Data Science &amp; Business Intelligence</title>
-<meta name="description" content="Portafolio de Damariz Vera: proyectos de forecasting, clasificación, segmentación de clientes y mantenimiento predictivo con redes neuronales, usando Python, SQL, TensorFlow y Power BI.">
+<title>Damariz Vera — Business Intelligence &amp; Data Analytics</title>
+<meta name="description" content="Portafolio de Damariz Vera, Ingeniera BI: dashboards Power BI, data warehouse SQL, proyectos de forecasting, clasificación, segmentación de clientes y mantenimiento predictivo con redes neuronales, usando Python, SQL, TensorFlow y Power BI.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -305,10 +305,10 @@
 
   <header>
     <p class="eyebrow">PORTAFOLIO <span>/</span> DATA &amp; BI</p>
-    <h1>Damariz Vera<br><em>Data Science &amp; Business Intelligence</em></h1>
+    <h1>Damariz Vera<br><em>Business Intelligence &amp; Data Analytics</em></h1>
     <p class="role">
-      Ingeniera en Informática con más de 10 años de experiencia en infraestructura y sistemas,
-      con foco reciente en Business Intelligence y especialización en Data Science. Estos son
+      Ingeniera BI con más de 2 años de experiencia en Power BI, SAP Business One y SAP HANA,
+      y más de 10 años en TI y sistemas, con especialización en Data Science. Estos son
       siete proyectos end-to-end — forecasting, clasificación con despliegue en producción,
       segmentación de clientes, mantenimiento predictivo con redes neuronales, data warehouse SQL, Power BI y ML aplicado a negocio — que combinan esa experiencia de negocio con herramientas
       actuales de análisis y machine learning.
@@ -323,17 +323,17 @@
   <section class="summary">
     <p>
       Experiencia real construyendo soluciones de datos para toma de decisiones —
-      desde un sistema de control de licencias en SQL Server hasta dashboards de
-      Power BI para gerencia — sumada a formación aplicada en análisis predictivo,
+      reportes automatizados en Power BI con gateway y seguridad por filas (RLS) para Finanzas,
+      consultas y vistas calculadas en SAP HANA, y un sistema de control de licencias en SQL Server — sumada a formación aplicada en análisis predictivo,
       machine learning y bases de datos relacionales (Diplomado en Data Science,
       Universidad Andrés Bello, 2026).
     </p>
     <div class="stack-panel">
       <h2>Stack principal</h2>
       <div class="stack-list">
-        <span>Python</span><span>SQL</span><span>Power BI</span>
-        <span>scikit-learn</span><span>XGBoost</span><span>pandas</span>
-        <span>PostgreSQL</span><span>DAX</span>
+        <span>Power BI</span><span>DAX</span><span>SQL</span>
+        <span>SAP HANA</span><span>PostgreSQL</span><span>ETL</span>
+        <span>Python</span><span>pandas</span><span>scikit-learn</span><span>XGBoost</span>
         <span>TensorFlow</span><span>Keras</span>
       </div>
     </div>
@@ -343,158 +343,10 @@
     <p class="section-label">Proyectos</p>
 
     <!-- Project 1 -->
-    <article class="project" style="--accent: var(--amber);">
-      <div class="project-head">
-        <div>
-          <p class="project-index">01 · FORECASTING</p>
-          <h3>air-operations-chile</h3>
-        </div>
-      </div>
-      <p class="tagline">
-        Pronóstico de operaciones aeroportuarias en Chile usando series de tiempo,
-        con comparación de modelos (SARIMA, Prophet, Random Forest, XGBoost) y un
-        dashboard de 5 páginas en Power BI para explorar estacionalidad y concentración
-        por aeropuerto.
-      </p>
-      <div class="kpis">
-        <div class="kpi"><span class="val">2.62%</span><span class="lbl">MAPE (XGBoost)</span></div>
-        <div class="kpi"><span class="val">1,123</span><span class="lbl">MAE</span></div>
-        <div class="kpi"><span class="val">45.2%</span><span class="lbl">Amplitud estacional</span></div>
-        <div class="kpi"><span class="val">5</span><span class="lbl">Páginas Power BI</span></div>
-      </div>
-      <div class="tech-row">
-        <span>Python</span><span>pandas</span><span>XGBoost</span><span>SARIMA</span>
-        <span>Prophet</span><span>Power BI</span><span>DAX</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/DamarizVera/air-operations-chile" target="_blank" rel="noopener">Ver repositorio →</a>
-        <a class="secondary" href="https://github.com/DamarizVera/air-operations-chile#readme" target="_blank" rel="noopener">README</a>
-      </div>
-    </article>
-
-    <!-- Project 2 -->
     <article class="project" style="--accent: var(--teal);">
       <div class="project-head">
         <div>
-          <p class="project-index">02 · CLASIFICACIÓN + PRODUCCIÓN</p>
-          <h3>air-quality-chile</h3>
-        </div>
-      </div>
-      <p class="tagline">
-        Clasificación de calidad del aire a partir de datos de monitoreo (SINCA),
-        con un modelo Random Forest desplegado en un chatbot de Telegram que
-        entrega el pronóstico en tiempo real, corriendo 24/7 en producción.
-      </p>
-      <div class="kpis">
-        <div class="kpi"><span class="val">95.2%</span><span class="lbl">Accuracy</span></div>
-        <div class="kpi"><span class="val">93.3%</span><span class="lbl">F1-macro</span></div>
-        <div class="kpi"><span class="val">24/7</span><span class="lbl">Bot en producción</span></div>
-        <div class="kpi"><span class="val">Railway</span><span class="lbl">Deploy</span></div>
-      </div>
-      <div class="tech-row">
-        <span>Python</span><span>scikit-learn</span><span>Random Forest</span>
-        <span>python-telegram-bot</span><span>Railway</span><span>SINCA</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/DamarizVera/air-quality-chile" target="_blank" rel="noopener">Ver repositorio →</a>
-        <a class="secondary" href="https://github.com/DamarizVera/air-quality-chile#readme" target="_blank" rel="noopener">README</a>
-      </div>
-    </article>
-
-    <!-- Project 3 -->
-    <article class="project" style="--accent: var(--violet);">
-      <div class="project-head">
-        <div>
-          <p class="project-index">03 · SQL + CLUSTERING</p>
-          <h3>retail-customer-segmentation</h3>
-        </div>
-      </div>
-      <p class="tagline">
-        Modelo de datos en SQL (staging → dimensiones → hechos), análisis RFM,
-        segmentación de clientes con K-Means y un modelo de predicción de
-        abandono (churn) con validación temporal para evitar fuga de datos.
-      </p>
-      <div class="kpis">
-        <div class="kpi"><span class="val">5</span><span class="lbl">Segmentos (K-Means)</span></div>
-        <div class="kpi"><span class="val">71.6%</span><span class="lbl">F1 churn (Gradient Boosting)</span></div>
-        <div class="kpi"><span class="val">5,878</span><span class="lbl">Clientes analizados</span></div>
-        <div class="kpi"><span class="val">RFM</span><span class="lbl">Recency · Frequency · Monetary</span></div>
-      </div>
-      <div class="tech-row">
-        <span>SQL</span><span>PostgreSQL</span><span>K-Means</span>
-        <span>Gradient Boosting</span><span>scikit-learn</span><span>Window Functions</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/DamarizVera/retail-customer-segmentation" target="_blank" rel="noopener">Ver repositorio →</a>
-        <a class="secondary" href="https://github.com/DamarizVera/retail-customer-segmentation#readme" target="_blank" rel="noopener">README</a>
-      </div>
-    </article>
-
-    <!-- Project 4 -->
-    <article class="project" style="--accent: var(--coral);">
-      <div class="project-head">
-        <div>
-          <p class="project-index">04 · DEEP LEARNING + MANTENIMIENTO PREDICTIVO</p>
-          <h3>predictive-maintenance-turbofan</h3>
-        </div>
-      </div>
-      <p class="tagline">
-        Predicción de la vida útil remanente (RUL) de motores turbofan a partir de series
-        de tiempo de sensores (NASA C-MAPSS), con una red LSTM en TensorFlow/Keras comparada
-        contra Random Forest y XGBoost en igualdad de condiciones: separación por motor y
-        ensamble de modelos para resultados estables.
-      </p>
-      <div class="kpis">
-        <div class="kpi"><span class="val">12.81</span><span class="lbl">RMSE LSTM (ciclos)</span></div>
-        <div class="kpi"><span class="val">4.3</span><span class="lbl">MAE cerca de la falla</span></div>
-        <div class="kpi"><span class="val">12.57</span><span class="lbl">RMSE XGBoost</span></div>
-        <div class="kpi"><span class="val">-70%</span><span class="lbl">Error vs. referencia</span></div>
-      </div>
-      <div class="tech-row">
-        <span>Python</span><span>TensorFlow</span><span>Keras</span><span>LSTM</span>
-        <span>XGBoost</span><span>scikit-learn</span><span>Series de tiempo</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/DamarizVera/predictive-maintenance-turbofan" target="_blank" rel="noopener">Ver repositorio →</a>
-        <a class="secondary" href="https://github.com/DamarizVera/predictive-maintenance-turbofan#readme" target="_blank" rel="noopener">README</a>
-      </div>
-    </article>
-
-    <!-- Project 5 -->
-    <article class="project" style="--accent: var(--amber);">
-      <div class="project-head">
-        <div>
-          <p class="project-index">05 · SQL + ETL + DATA WAREHOUSE</p>
-          <h3>chinook-sql-etl-warehouse</h3>
-        </div>
-      </div>
-      <p class="tagline">
-        Pipeline de datos de punta a punta en PostgreSQL: staging con limpieza, data warehouse
-        en estrella, cargas idempotentes (UPSERT), controles de calidad que detienen el proceso
-        ante errores y marts analíticos (RFM, cohortes, Pareto, medias móviles), orquestado con
-        un script Python.
-      </p>
-      <div class="kpis">
-        <div class="kpi"><span class="val">2.240</span><span class="lbl">Líneas conciliadas</span></div>
-        <div class="kpi"><span class="val">7/7</span><span class="lbl">Controles de calidad</span></div>
-        <div class="kpi"><span class="val">5</span><span class="lbl">Tablas del modelo estrella</span></div>
-        <div class="kpi"><span class="val">7</span><span class="lbl">Vistas analíticas</span></div>
-      </div>
-      <div class="tech-row">
-        <span>PostgreSQL</span><span>SQL</span><span>ETL</span><span>Data Warehouse</span>
-        <span>Funciones ventana</span><span>Python</span><span>Calidad de datos</span>
-      </div>
-      <div class="project-links">
-        <a href="https://github.com/DamarizVera/chinook-sql-etl-warehouse" target="_blank" rel="noopener">Ver repositorio →</a>
-        <a class="secondary" href="https://github.com/DamarizVera/chinook-sql-etl-warehouse#readme" target="_blank" rel="noopener">README</a>
-      </div>
-    </article>
-
-    <!-- Project 6 -->
-    <article class="project" style="--accent: var(--teal);">
-      <div class="project-head">
-        <div>
-          <p class="project-index">06 · BUSINESS INTELLIGENCE + POWER BI</p>
+          <p class="project-index">01 · BUSINESS INTELLIGENCE + POWER BI</p>
           <h3>superstore-powerbi-dashboard</h3>
         </div>
       </div>
@@ -520,11 +372,71 @@
       </div>
     </article>
 
-    <!-- Project 7 -->
+    <!-- Project 2 -->
+    <article class="project" style="--accent: var(--amber);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">02 · SQL + ETL + DATA WAREHOUSE</p>
+          <h3>chinook-sql-etl-warehouse</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Pipeline de datos de punta a punta en PostgreSQL: staging con limpieza, data warehouse
+        en estrella, cargas idempotentes (UPSERT), controles de calidad que detienen el proceso
+        ante errores y marts analíticos (RFM, cohortes, Pareto, medias móviles), orquestado con
+        un script Python.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">2.240</span><span class="lbl">Líneas conciliadas</span></div>
+        <div class="kpi"><span class="val">7/7</span><span class="lbl">Controles de calidad</span></div>
+        <div class="kpi"><span class="val">5</span><span class="lbl">Tablas del modelo estrella</span></div>
+        <div class="kpi"><span class="val">7</span><span class="lbl">Vistas analíticas</span></div>
+      </div>
+      <div class="tech-row">
+        <span>PostgreSQL</span><span>SQL</span><span>ETL</span><span>Data Warehouse</span>
+        <span>Funciones ventana</span><span>Python</span><span>Calidad de datos</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/chinook-sql-etl-warehouse" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/chinook-sql-etl-warehouse#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 3 -->
+    <article class="project" style="--accent: var(--amber);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">03 · FORECASTING</p>
+          <h3>air-operations-chile</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Pronóstico de operaciones aeroportuarias en Chile usando series de tiempo,
+        con comparación de modelos (SARIMA, Prophet, Random Forest, XGBoost) y un
+        dashboard de 5 páginas en Power BI para explorar estacionalidad y concentración
+        por aeropuerto.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">2.62%</span><span class="lbl">MAPE (XGBoost)</span></div>
+        <div class="kpi"><span class="val">1,123</span><span class="lbl">MAE</span></div>
+        <div class="kpi"><span class="val">45.2%</span><span class="lbl">Amplitud estacional</span></div>
+        <div class="kpi"><span class="val">5</span><span class="lbl">Páginas Power BI</span></div>
+      </div>
+      <div class="tech-row">
+        <span>Python</span><span>pandas</span><span>XGBoost</span><span>SARIMA</span>
+        <span>Prophet</span><span>Power BI</span><span>DAX</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/air-operations-chile" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/air-operations-chile#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 4 -->
     <article class="project" style="--accent: var(--coral);">
       <div class="project-head">
         <div>
-          <p class="project-index">07 · MACHINE LEARNING</p>
+          <p class="project-index">04 · MACHINE LEARNING</p>
           <h3>superstore-loss-prediction</h3>
         </div>
       </div>
@@ -546,6 +458,94 @@
       <div class="project-links">
         <a href="https://github.com/DamarizVera/superstore-loss-prediction" target="_blank" rel="noopener">Ver repositorio →</a>
         <a class="secondary" href="https://github.com/DamarizVera/superstore-loss-prediction#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 5 -->
+    <article class="project" style="--accent: var(--teal);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">05 · CLASIFICACIÓN + PRODUCCIÓN</p>
+          <h3>air-quality-chile</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Clasificación de calidad del aire a partir de datos de monitoreo (SINCA),
+        con un modelo Random Forest desplegado en un chatbot de Telegram que
+        entrega el pronóstico en tiempo real, corriendo 24/7 en producción.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">95.2%</span><span class="lbl">Accuracy</span></div>
+        <div class="kpi"><span class="val">93.3%</span><span class="lbl">F1-macro</span></div>
+        <div class="kpi"><span class="val">24/7</span><span class="lbl">Bot en producción</span></div>
+        <div class="kpi"><span class="val">Railway</span><span class="lbl">Deploy</span></div>
+      </div>
+      <div class="tech-row">
+        <span>Python</span><span>scikit-learn</span><span>Random Forest</span>
+        <span>python-telegram-bot</span><span>Railway</span><span>SINCA</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/air-quality-chile" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/air-quality-chile#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 6 -->
+    <article class="project" style="--accent: var(--violet);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">06 · SQL + CLUSTERING</p>
+          <h3>retail-customer-segmentation</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Modelo de datos en SQL (staging → dimensiones → hechos), análisis RFM,
+        segmentación de clientes con K-Means y un modelo de predicción de
+        abandono (churn) con validación temporal para evitar fuga de datos.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">5</span><span class="lbl">Segmentos (K-Means)</span></div>
+        <div class="kpi"><span class="val">71.6%</span><span class="lbl">F1 churn (Gradient Boosting)</span></div>
+        <div class="kpi"><span class="val">5,878</span><span class="lbl">Clientes analizados</span></div>
+        <div class="kpi"><span class="val">RFM</span><span class="lbl">Recency · Frequency · Monetary</span></div>
+      </div>
+      <div class="tech-row">
+        <span>SQL</span><span>PostgreSQL</span><span>K-Means</span>
+        <span>Gradient Boosting</span><span>scikit-learn</span><span>Window Functions</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/retail-customer-segmentation" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/retail-customer-segmentation#readme" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+
+    <!-- Project 7 -->
+    <article class="project" style="--accent: var(--coral);">
+      <div class="project-head">
+        <div>
+          <p class="project-index">07 · DEEP LEARNING + MANTENIMIENTO PREDICTIVO</p>
+          <h3>predictive-maintenance-turbofan</h3>
+        </div>
+      </div>
+      <p class="tagline">
+        Predicción de la vida útil remanente (RUL) de motores turbofan a partir de series
+        de tiempo de sensores (NASA C-MAPSS), con una red LSTM en TensorFlow/Keras comparada
+        contra Random Forest y XGBoost en igualdad de condiciones: separación por motor y
+        ensamble de modelos para resultados estables.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><span class="val">12.81</span><span class="lbl">RMSE LSTM (ciclos)</span></div>
+        <div class="kpi"><span class="val">4.3</span><span class="lbl">MAE cerca de la falla</span></div>
+        <div class="kpi"><span class="val">12.57</span><span class="lbl">RMSE XGBoost</span></div>
+        <div class="kpi"><span class="val">-70%</span><span class="lbl">Error vs. referencia</span></div>
+      </div>
+      <div class="tech-row">
+        <span>Python</span><span>TensorFlow</span><span>Keras</span><span>LSTM</span>
+        <span>XGBoost</span><span>scikit-learn</span><span>Series de tiempo</span>
+      </div>
+      <div class="project-links">
+        <a href="https://github.com/DamarizVera/predictive-maintenance-turbofan" target="_blank" rel="noopener">Ver repositorio →</a>
+        <a class="secondary" href="https://github.com/DamarizVera/predictive-maintenance-turbofan#readme" target="_blank" rel="noopener">README</a>
       </div>
     </article>
 
